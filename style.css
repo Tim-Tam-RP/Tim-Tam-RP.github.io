@@ -1,9 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Oxygen;
+    font-family: 'Varela Round', sans-serif;;
+}
+
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::selection {
+    background: rgb(0, 123, 255, 0.3);
 }
 
 .center {
@@ -49,7 +67,7 @@ header {
 }
 
 header.sticky {
-    background: #8B8000;
+    background: #000;
     padding: 15px 100px;
 }
 
@@ -123,7 +141,7 @@ header .btn {
 
     header .menu {
         position: fixed;
-        background: #8B8000;
+        background: #000;
         flex-direction: column;
         min-width: 400px;
         height: 100vh;
