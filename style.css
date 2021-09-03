@@ -3,8 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Varela Round', sans-serif;;
+    font-family: 'Varela Round', sans-serif;
+    ;
 }
+
+p {
+    text-align: justify;
+}
+
 
 /* custom scroll bar */
 
@@ -39,6 +45,7 @@ body {
     min-height: 100vh;
 }
 
+
 /* Nav Bar */
 
 .section-main {
@@ -49,7 +56,6 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
 }
 
 header {
@@ -63,7 +69,6 @@ header {
     align-items: center;
     padding: 20px 100px;
     transition: 0.6s;
-
 }
 
 header.sticky {
@@ -78,7 +83,6 @@ header .brand {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
-
 }
 
 header .menu {
@@ -87,7 +91,6 @@ header .menu {
     justify-content: center;
     align-items: center;
 }
-
 
 header .menu a {
     color: #fff;
@@ -99,7 +102,6 @@ header .menu a {
     border-radius: 20px;
     transition: 0.3s;
     transition-property: color, background;
-
 }
 
 header .menu a:hover {
@@ -135,10 +137,9 @@ header .btn {
 }
 
 @media (max-width: 1060px) {
-    header .btn{
+    header .btn {
         display: block;
     }
-
     header .menu {
         position: fixed;
         background: #000;
@@ -151,18 +152,15 @@ header .btn {
         transition: 0.5s;
         transition-property: right;
     }
-
     header .menu.active {
         right: 0;
-    }    
-
+    }
     header .menu .close-btn {
         position: absolute;
         top: 0;
         left: 0;
         margin: 25px;
     }
-
     header .menu a {
         display: block;
         font-size: 20px;
@@ -170,4 +168,3 @@ header .btn {
         padding: 0 15px;
     }
 }
-
