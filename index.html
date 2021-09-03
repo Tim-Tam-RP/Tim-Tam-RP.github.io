@@ -4,9 +4,8 @@
     <title>TTRP | Home</title>
     <link rel="stylesheet" href="style.css">
     <script scr="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <script scr="main.js"></script>
     <link rel="icon" type="image/png" href="visual/fv.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
 
@@ -14,61 +13,73 @@
 
 <body>
 
-    <!-- Navbar (Dimitrios) -->
-    <nav class="navbar">
-        <div class="content">
-            <div class="logo">
-                <a href="#">Tim Tam RP</a>
+    <!-- Nav Bar (Dimitrios) -->
+    <header>
+        <a href="#" class="brand">Tim Tam RP</a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
             </div>
-            <ul class="menu-list">
-                <div class="icon cancel-btn">
-                    <i class="fas fa-times"></i>
-                </div>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="applications.html">Forms</a></li>
-                <li><a href="https://upgrade.chat/872023097279139910">Support Us</a></li>
-                <li><a href="http://localhost:2035/discord/oauth2/login">Sign In</a></li>
-            </ul>
-
-            <!-- Hamburger Menu (Dimitrios) -->
-            <div class="icon menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+            <a href="#">About</a>
+            <a href="#">Applications</a>
+            <a href="#">Tickets</a>
+            <a href="#">Support Us</a>
         </div>
-    </nav>
-
-
-
-    <!-- Sticky Banner (Dimitrios) -->
-    <div class="banner">
-        <!-- Photo should be in CSS (Dimitrios) -->
-    </div>
-    <div class="about">
-        <div class="content">
-            <div class="title">About Us!</div>
-            <p>We are a small developer team that is located in Sydney, New South Wales. We are all currently developing our skills in the world of coding and this Five M server is an embodiment of our efforts so far. We've all spent numerous hours on FiveM
-                servers role-playing and having fun times, after playing on these server we have been inspired to create our own Five M Role play server know as Tim Tam RP. This server is a way for us to develop our skills as develops while simultaneous
-                providing the absolute best possible role-play experience in the Five M multiverse. Because of our previous exposure to the plentiful amount of role-play server around we know what works and does not work. This way out server can be the
-                best it can possibly be if not the best the Five M to offer. We will strive to make this dream a reality. Tim Tam RP provides a realistic Australian role-play experience allowing you to role-play as you really lived in the city of Sydney.
-                This means that all the things that can happen in real life Sydney can happen in the game as well as due to this being a game, you can embellish your role-plays to make them anything you want to as there is no real restriction on creativity.
-                No matter how cliche it is the only limit is your mind.</p>
-            <br><br><br>
-
-            <div class="title">Join Our Community!</div> <br> <br>
-
-
-
-            <!-- Discord Embed (Dimitrios) -->
-
-            <!-- 'server' = discord server id -->
-            <!-- 'channel' = default channel id -->
-            <div class="dwidget">
-                <widgetbot server="872023097279139910" channel="872034712254824530" width="90%" height="auto">
-                </widgetbot>
-                <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-
-            </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
         </div>
+    </header>
+
+    <!-- Home Header Section -->
+    <section class ="section-main">
+    </section>
+
+    <section class ="section-two">
+        <h2>About Us</h2>
+        <p>We are a small developer team that is located in Sydney, New South Wales. We are all currently developing our skills in the world of coding and this Five M server is an embodiment of our efforts so far. We've all spent numerous hours on FiveM
+            servers role-playing and having fun times, after playing on these server we have been inspired to create our own Five M Role play server know as Tim Tam RP. This server is a way for us to develop our skills as develops while simultaneous
+            providing the absolute best possible role-play experience in the Five M multiverse. Because of our previous exposure to the plentiful amount of role-play server around we know what works and does not work. This way out server can be the
+            best it can possibly be if not the best the Five M to offer. We will strive to make this dream a reality. Tim Tam RP provides a realistic Australian role-play experience allowing you to role-play as you really lived in the city of Sydney.
+            This means that all the things that can happen in real life Sydney can happen in the game as well as due to this being a game, you can embellish your role-plays to make them anything you want to as there is no real restriction on creativity.
+            No matter how cliche it is the only limit is your mind.</p>
+        
+
+    </section>
+
+    <script type="text/javascript">
+    //javascript for navbar
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle('sticky', window.scrollY > 0);
+    });
+
+    //javascript for sidebar
+    var menu = document.querySelector('.menu');
+    var menuBtn = document.querySelector('.menu-btn');
+    var closeBtn = document.querySelector('.close-btn');
+
+    menuBtn.addEventListener("click", () => {
+        menu.classList.add('active');
+    });
+
+    closeBtn.addEventListener("click", () => {
+        menu.classList.remove('active');
+    });
+    </script>
+
+<!-- Discord Embed -->
+
+<!-- 'server' = discord server id -->
+<!-- 'channel' = discord server id -->
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    new Crate({
+      server: '872023097279139910',
+      channel: '872034712254824530'
+    })
+  </script>
+  
+
+
 
 
 </body>
