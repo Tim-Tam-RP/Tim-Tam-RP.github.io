@@ -14,21 +14,16 @@
 <body>
 
     <!-- Nav Bar (Dimitrios) -->
-    <header>
-        <a href="#" class="brand">Tim Tam RP</a>
-        <div class="menu">
-            <div class="btn">
-                <i class="fas fa-times close-btn"></i>
-            </div>
-            <a href="#">About</a>
-            <a href="applications.html">Applications</a>
-            <a href="#">Tickets</a>
-            <a href="#">Support Us</a>
-        </div>
-        <div class="btn">
-            <i class="fas fa-bars menu-btn"></i>
-        </div>
-    </header>
+    <div class="topnav" id="nav">
+        <a href="#home" class="brand">Tim Tam RP</a>
+        <a href="#home">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
     <!-- Home Header Section -->
     <section class="section-main">
@@ -122,21 +117,8 @@
     <script type="text/javascript">
         //javascript for navbar
         window.addEventListener("scroll", function() {
-            var header = document.querySelector("header");
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
-
-        //javascript for sidebar
-        var menu = document.querySelector('.menu');
-        var menuBtn = document.querySelector('.menu-btn');
-        var closeBtn = document.querySelector('.close-btn');
-
-        menuBtn.addEventListener("click", () => {
-            menu.classList.add('active');
-        });
-
-        closeBtn.addEventListener("click", () => {
-            menu.classList.remove('active');
+            var nav = document.querySelector(".topnav");
+            nav.classList.toggle('sticky', window.scrollY > 0);
         });
     </script>
 
@@ -151,9 +133,20 @@
         })
     </script>
 
-
-
-
+    <script>
+        function myFunction() {
+            var x = document.getElementById("nav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else if (x.className === "topnav sticky") {
+                x.className += " responsive";
+            } else if (x.className === "topnav responsive sticky") {
+                x.className -= " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 
 </body>
 
